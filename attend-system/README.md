@@ -405,7 +405,7 @@ def mark_attendance(student_id, session_id, confidence):
 
 - Hệ điều hành: Windows 10/11 (64-bit)
 - Python: 3.8 trở lên (khuyến nghị 3.9 hoặc 3.10)
-- Camera: Webcam thường (hoặc Intel RealSense D435i nếu có)
+- Camera: Webcam laptop tích hợp, webcam USB, hoặc Intel RealSense D435i
 - RAM: Tối thiểu 8GB (khuyến nghị 16GB)
 - GPU: NVIDIA GPU với CUDA support (tùy chọn, cho training nhanh hơn)
   - VRAM: Tối thiểu 4GB
@@ -458,10 +458,15 @@ Chỉnh sửa các file trong thư mục `configs/`:
 camera:
   type: "webcam"
   webcam:
-    device_id: 0
+    device_id: 0  # 0: webcam laptop, 1: webcam ngoài (nếu có nhiều camera)
     width: 640
     height: 480
 ```
+
+**Lưu ý về camera:**
+- `device_id: 0` - Webcam laptop (mặc định)
+- `device_id: 1` - Webcam USB ngoài (nếu có)
+- Nếu không mở được camera, thử thay đổi `device_id` từ 0 → 1 → 2
 
 *configs/schedule.yaml*
 ```yaml
