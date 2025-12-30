@@ -1,0 +1,19 @@
+# Database Configuration
+
+database:
+  type: "sqlite"
+  path: "db/attendance.db"
+  
+  # Nếu dùng PostgreSQL/MySQL trong tương lai
+  # type: "postgresql"
+  # host: "localhost"
+  # port: 5432
+  # username: "admin"
+  # password: "password"
+  # database: "attendance_system"
+
+# Backup configuration
+backup:
+  enabled: true
+  interval_days: 7
+  backup_path: "db/backups/"
