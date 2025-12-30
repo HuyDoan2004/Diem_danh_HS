@@ -1,6 +1,0 @@
-student_id,name,class_name,email,phone
-SV001,Nguyen Van A,CNTT01,nva@example.com,0901234567
-SV002,Tran Thi B,CNTT01,ttb@example.com,0902345678
-SV003,Le Van C,CNTT02,lvc@example.com,0903456789
-SV004,Pham Thi D,CNTT02,ptd@example.com,0904567890
-SV005,Hoang Van E,CNTT03,hve@example.com,0905678901
